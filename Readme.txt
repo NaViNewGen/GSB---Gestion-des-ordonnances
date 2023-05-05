@@ -1,34 +1,33 @@
-How to run the web application:
+Pour lancer l'application Web :
 
-1- Copy the database files GSB(GSB.mdf and GSB_log.ldf) to (Microsoft SQL ServerMSSQL/MSSQL/DATA/).
+1- Copier les fichiers de bases de données (GSB.mdf et GSB_log.ldf) sur (Microsoft SQL ServerMSSQL/MSSQL/DATA/).
 
-2- Open SQL Server Management Studio then attach the database Library by clicking on button right of the mouse on Databases.
+2- Ouvrir SQL Server Management Studio puis lier la database en faisant clic droit sur Databases.
 
-3- In Visual Studio import the solution.
+3- Ouvrir la solution sur Visual Studio.
 
-4 - Go to Solution Explorer and open the file Web.config
+4 - Aller dans l'explorateur de solutions et ouvrez le fichier Web.config
 
-5- Modify the file by the name of your server in the following script:
+5- Modifier le fichier en mettant le nom de votre serveur dans le script suivant :
 
 	<connectionStrings>
 		<add
 		  name="GSB"
 		  providerName="System.Data.SqlClien"
-		  connectionString="Data Source=NameOfyourServer;Initial Catalog=GSB;Integrated Security=True;Uid=auth_windows;" />
+		  connectionString="Data Source=NomDuServeur;Initial Catalog=GSB;Integrated Security=True;Uid=auth_windows;" />
 	</connectionStrings>
 	
-PS: The name of the server can be gotten in the SQL Server Management Studio by clicking on button right of the mouse on the server 
-	then click on properties and copy the name then replace the 'NameOfyourServer' by the copied name.
+PS: Le nom du serveur peut être obtenu sur SQL Server Management Studio en faisant un clic droit sur le serveur puis en allant dans Propriétés
 
-6- The username and password of an admin account: these accounts have no password just enter the username 
+6- Les identifiants admin pour se connecter à l'application sont les suivants :
 		username : admin
-		password : 
-	And for a pharmacien account:
-		username : Thomas
+		password : admin
+	Pour un compte Pharmacien :
+		username : Pharmacien
 		password :
-	And for a medecin account:
-		username : AFlorence
+	Pour un compte Médecin :
+		username : Médecin
 		password :
-	And for a patient account:
-		username : mallou
+	Pour un compte Patient :
+		username : Patient
 		password :  
